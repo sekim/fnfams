@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--//html5에서 bad value는 server root에서 .htaccess 파일에 "Header set X-UA-Compatible "IE=edge"" 이렇게 추가해주세요-->
+<title>fams</title>
+<script type="text/javascript" src="../css/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="../css/fmscommon.css">
+<link rel="stylesheet" href="../css/tableset.css">
+<!--[if IE 6]><![endif]-->
+<!--[if IE 7]><![endif]-->
+<!--[if IE 8]><![endif]-->
+<!--[if IE 9]><![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+
+<![endif]-->
+<script>
+
+	function valin(this_id){// 콤보박스 값 넣어주는 샘플
+		$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		$('#'+this_id+' select').change(function(){
+			$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		});
+	}
+</script>
+</head>
+<body>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<dl>
+	<dt><strong class="hide">바로가기 메뉴</strong></dt>
+	<dd><a class="accessibility" href="#gnb">메인메뉴가기</a></dd>
+	<dd><a class="accessibility" href="#content">본문내용가기</a></dd>
+</dl>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<div class="body_wrap">
+	<!-- 공통 상단 -->
+	<header class="header2">
+		<div class="header_wrap">
+			<h1><a href="#">FMS로고 링크</a></h1>
+		</div>
+	</header>
+	<!-- 메인컨튼츠 영역 -->
+	<div class="introcont">
+
+			<div class="introcont_box">
+				<div class="logbbs_area">
+					<div class="intlft">
+						<div class="intlft_wrap">
+							<h1>Login to your account</h1>
+							<ul>
+								<li class="inptbox">
+									<div class="inp_wrap">
+										<label for="" class="id">
+										</label>
+										<input type="text">
+										<a href="" class="btn_wcancle"></a>
+									</div>
+								</li>
+								<li class="inptbox">
+									<div class="inp_wrap">
+										<label for="" class="pw">
+										</label>
+										<input type="password">
+										<a href="" class="btn_wcancle"></a>
+									</div>
+								</li>
+								<li class="btnbox">
+									<label for=""><input name="" type="checkbox" value="" />아이디 저장</label>
+									<a href="" class="btn_famslogin"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="intrgt">
+						<h1>FAMS Notice</h1>
+						<div class="table_wrap">
+							<a href="" class="btn_txtmore">+ more</a>
+							<table class="table_ty1 intro_0_1">
+										<caption class='hidden'>템플릿</caption>
+										<colgroup>
+											<col class="col1">
+											<col class="col2">
+											<col class="col3">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="clf">일자</th>
+												<th>제목</th>
+												<th class="cle">연락처</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="clf anc">2013-06-24</td>
+												<td class="anl">가가가가가가가가가가가가가가가</td>
+												<td class="cle anc">010-4717-0000</td>
+											</tr>
+											<!-- 활성 행은 TR에 ac를 넣는다 -->
+											<tr>
+												<td class="clf anc">2013-06-24</td>
+												<td class="anl">가가가가가가가가가가가가가가가</td>
+												<td class="cle anc">010-4717-0000</td>
+											</tr>
+											<tr>
+												<td class="clf anc">2013-06-24</td>
+												<td class="anl">가가가가가가가가가가가가가가가</td>
+												<td class="cle anc">010-4717-0000</td>
+											</tr>
+											<tr>
+												<td class="clf anc">2013-06-24</td>
+												<td class="anl">가가가가가가가가가가가가가가가</td>
+												<td class="cle anc">010-4717-0000</td>
+											</tr>
+											<!-- 마지막행 TR에 클래스 부여 -->
+											<tr class="oddbg rwe">
+												<td class="clf anc">2013-06-24</td>
+												<td class="anl">가가가가가가가가가가가가가가가</td>
+												<td class="cle anc">010-4717-0000</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+									<div class="fmspage">
+										<a href="" class="btn_exdown2">엑셀다운로드</a>
+										<div class="fmspage_wrap">
+											<a href="" class="btn_pgprev2">처음페이지</a>
+											<a href="" class="btn_pgprev">이전페이지</a>
+											<a href="" class="btn_pgtxt txt_active">1</a>
+											<a href="" class="btn_pgtxt">2</a>
+											<a href="" class="btn_pgtxt">3</a>
+											<a href="" class="btn_pgtxt">4</a>
+											<a href="" class="btn_pgtxt">5</a>
+											<a href="" class="btn_pgtxt">6</a>
+											<a href="" class="btn_pgtxt">7</a>
+											<a href="" class="btn_pgtxt">8</a>
+											<a href="" class="btn_pgtxt">9</a>
+											<a href="" class="btn_pgtxt">10</a>
+											<a href="" class="btn_pgnext">다음페이지</a>
+											<a href="" class="btn_pgnext2">마지막페이지</a>
+										</div>
+										<div class="pggd">
+											<strong>1</strong>/<span>10</span>
+										</div>
+									</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+	</div>
+	<!-- 공통 하단 -->
+	<footer class="footer">
+		<div class="footer_wrap">
+			<a href="" class="btn_btlogo">에프앤가이드</a>
+			<p class="txt_box">
+				본사이트를 통해 제공되는 정보는 에프앤가이드와 제휴 계약을 맺은 신뢰할 만한 회사들로부터 제공된 정보를 기초로 해서 만들어진 것입니다. 그러나 당사 또는 당사에 정보를 제공한 회사가 정보의 정확성과 완전성을 보장하는 것은 아니며, 어떠한 경우에도 정보이용의 결과에 대해 책임을 지지 않습니다. 그리고 본 사이트를 통해 제공되는 자료는 지적재산권과 출판권의 보호를 받는 재산권으로서 당사의 동의 없이 어떠한 형태로든 복제, 변형, 배포, 전송, 대여할 수 없으며 만일 이를 위반할 경우 법적인 책임을 지게됩니다.
+			</p>
+			<p class="txt_box2">
+				<strong>(주)에프앤가이드</strong>
+				<span>|</span>
+				<span>Copyright (c) 2000 FnGuide Corporation. All rights reserved.</span>
+			</p>
+
+		</div>
+	</footer>
+</div>
+<!--script section-->
+<script>
+	<!--사용자 script 입력부분-->
+
+</script>
+<!--//script section-->
+</body>
+</html>

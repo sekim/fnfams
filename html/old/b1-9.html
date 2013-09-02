@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--//html5에서 bad value는 server root에서 .htaccess 파일에 "Header set X-UA-Compatible "IE=edge"" 이렇게 추가해주세요-->
+<title>펀드별 거래내역</title>
+<script type="text/javascript" src="../css/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="../css/fmscommon.css">
+<link rel="stylesheet" href="../css/tableset.css">
+<!--[if IE 6]><![endif]-->
+<!--[if IE 7]><![endif]-->
+<!--[if IE 8]><![endif]-->
+<!--[if IE 9]><![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+<![endif]-->
+<script>
+
+	function valin(this_id){// 콤보박스 값 넣어주는 샘플
+		$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		$('#'+this_id+' select').change(function(){
+			$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		});
+	}
+</script>
+</head>
+<body>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<dl>
+	<dt><strong class="hide">바로가기 메뉴</strong></dt>
+	<dd><a class="accessibility" href="#gnb">메인메뉴가기</a></dd>
+	<dd><a class="accessibility" href="#content">본문내용가기</a></dd>
+</dl>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<div class="body_wrap">
+	<!-- 공통 상단 -->
+	<header class="header">
+		<div class="header_wrap">
+			<h1><a href="#">FMS로고 링크</a></h1>
+			<nav id="gnb" class="gnb main_w">
+				<ul class="virt_clr">
+					<li><a href="a1-1.html">시장정보</a></li>
+					<li><a href="b1-1.html" class="ac">포트폴리오분석</a></li>
+					<li><a href="c1-1.html">성과분석</a></li>
+					<li><a href="d1-1.html">위험분석</a></li>
+					<li><a href="e1-1.html">성과요인분석</a></li>
+					<li><a href="f1-1.html">My Menu</a></li>
+					<li><a href="s1-1.html">설정관리</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- 메인컨튼츠 영역 -->
+	<div id="content" class="content">
+		<div class="content_wrap virt_clr">
+			<!-- LNB *활성화 클래스 ac -->
+			<div class="left-area f-l">
+				<div class="wrap">
+					<h1>포트폴리오분석</h1>
+					<!-- 좌측메뉴 -->
+					<nav class="lnb">
+						<div class="lnb_wrap">
+							<div class="menubox">
+								<h2>포트폴리오 종합</h2>
+								<ul>
+									<li><a href="b1-3.html"><span>보유내역</span></a></li>
+									<li><a href="b1-4.html"><span>펀드현황</span></a></li>
+									<li><a href="b1-5.html"><span>펀드현황 추이</span></a></li>
+									<li><a href="b1-6.html"><span>펀드현황 그래프</span></a></li>
+									<li><a href="b1-7.html"><span>성과 모니터링</span></a></li>
+									<li><a href="b1-8.html"><span>펀드별 보유내역</span></a></li>
+									<li><a href="b1-9.html" class="ac"><span>펀드별 거래내역</span></a></li>
+								</ul>
+							</div>
+							<div class="menubox">
+								<h2>포트폴리오 정보</h2>
+								<ul>
+									<li><a href="b2-1.html"><span>채권 잔존만기별 현황</span></a></li>
+									<li><a href="b2-2.html"><span>채권 신용등급별 현황</span></a></li>
+									<li><a href="b2-3.html"><span>채권 유형별 현황</span></a></li>
+									<li><a href="b2-4.html"><span>종목 검색</span></a></li>
+									<li><a href="b2-5.html"><span>주식 업종 구성 현황</span></a></li>
+									<li><a href="b2-6.html"><span>주식 벨류에이션</span></a></li>
+									<li><a href="b2-7.html"><span>스타일 현황</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<!-- 개인정보 -->
+					<dl class="la_info">
+						<dt>홍길동 <a href="#">logout</a></dt>
+						<dd>담당자 : 양치기</dd>
+						<dd>연락처 : 02-769-7777</dd>
+					</dl>
+					<!-- 공지사항 -->
+					<dl class="la_bbs" >
+						<dt>공지사항 <a href="">more</a></dt>
+						<dd><a href="">제목제목제목</a></dd>
+						<dd><a href="">제목제목제목</a></dd>
+						<dd><a href="">제목제목제목</a></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- 컨텐츠 -->
+			<article class="cont f-r">
+				<div class="wrap">
+					<div class="guide_area virt_clr">
+						<p class="gd f-r"><span>포트폴리오분석</span><span> > </span><span>포트폴리오 종합</span><span> > </span><strong>펀드별 거래내역</strong></p>
+						<a href="" class="btn_print">인쇄</a>
+					</div>
+					<section class="section_pg">
+						<h1 class="pg_title">펀드별 거래내역</h1>
+						<!-- 상단 -->
+						<section class="section_box">
+							<!-- 공용 옵션박스 -->
+							<div class="p_b6">
+								<div class="option_t3_box virt_clr">
+									<div class="fbox fbox_ty1">
+										<label for="">기준일자</label>
+										<div class="cad_ty1">
+											<input name="" type="text" maxlength="10" class="int_ty1" />
+											<a href="" class="btn_calopen">달력</a>
+										</div>
+										<span class="f_etc1">~</span>
+										<div class="cad_ty1">
+											<input name="" type="text" maxlength="10" class="int_ty1" />
+											<a href="" class="btn_calopen">달력</a>
+										</div>
+									</div>
+									<div class="fbox fbox_ty1">
+										<label for="">단위</label>
+										<div class="txt_ty1">( %, 원, &nbsp;</div>
+										<div class="sel_ty2" id="sam0">
+											<select>
+												<option selected>백만원</option>
+												<option>억원</option>
+											</select>
+											<span  class="sel_val"></span>
+											<script type="text/javascript">
+												valin('sam0');
+											</script>
+										</div>
+										<div class="txt_ty1">&nbsp;)</div>
+									</div>
+									<p class="btn_group virt_clr">
+										<a href="" class="btn_view">조회</a>
+									</p>
+								</div>
+							</div>
+							<!-- 테이블 규정 -->
+							<!-- 첫번째 td에는 clf, 마지막 td에는 cle 클래스가 꼭 있어야 함 -->
+							<!-- 마지막 행 tr에는 rwe 클래스가 꼭 있어야 함 -->
+							<!-- td 정렬 anl, anr, anc -->
+							<!-- th 기본은 센터 anc는 안줘도 됨 -->
+							<!-- 5개 마다 'oddbg' 꼭 있어야함 -->
+							<table class="table_ty1 b1-9-1">
+								<caption class='hidden'>템플릿</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+									<col class="col5">
+									<col class="col6">
+									<col class="col7">
+									<col class="col8">
+									<col class="col9">
+									<col class="col10">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf"><a href="#aa" class="sorticon icon-chevron-de">펀드구분</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">상위펀드</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">펀드명</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">펀드유형</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">기준가</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">설정액</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">순자산</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">주식비중</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">채권비중</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">현금성비중</a></th>
+										<th class="cle"><a href="#aa" class="sorticon icon-chevron-de">기타비중</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf anc">모펀드</td>
+										<td class="anc">0</td>
+										<td class="anl" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anl">채권혼합</td>
+										<td class="anr">1,036.36</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">20.00</td>
+										<td class="anr">20.00</td>
+										<td class="anr">20.00</td>
+										<td class="cle anr">20.00</td>
+									</tr>
+									<!-- 활성 행은 TR에 ac를 넣는다 -->
+									<tr class="ac">
+										<td class="clf anc">모펀드</td>
+										<td class="anc">0</td>
+										<td class="anl" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anl">채권혼합</td>
+										<td class="anr">1,036.36</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">20.00</td>
+										<td class="anr">20.00</td>
+										<td class="anr">20.00</td>
+										<td class="cle anr">20.00</td>
+									</tr>
+									<!-- 마지막행 TR에 클래스 부여 -->
+									<tr class="rwe">
+										<td class="clf anc">모펀드</td>
+										<td class="anc">0</td>
+										<td class="anl" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anl">채권혼합</td>
+										<td class="anr">1,036.36</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">20.00</td>
+										<td class="anr">20.00</td>
+										<td class="anr">20.00</td>
+										<td class="cle anr">20.00</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+							<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+									<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+						</section>
+						<section class="section_box">
+							<!-- 옵션박스 밖에 위치 버튼 박스 -->
+							<div class="head_box virt_clr">
+								<h2>거래 내역</h2>
+							</div>
+							<!-- 공용 옵션박스 -->
+							<div class="p_b6">
+								<div class="option_t3_box virt_clr">
+									<div class="fbox fbox_ty1">
+										<label for="">거래구분</label>
+										<div class="sel_ty1" id="sam1">
+											<select>
+												<option selected>가나다라</option>
+												<option>마바사</option>
+											</select>
+											<span  class="sel_val"></span>
+											<script type="text/javascript">
+												valin('sam1');
+											</script>
+										</div>
+									</div>
+									<div class="fbox fbox_ty1">
+										<label for="">단위</label>
+										<div class="txt_ty1">( 주, 원, &nbsp;</div>
+										<div class="sel_ty2" id="sam0">
+											<select>
+												<option selected>백만원</option>
+												<option>억원</option>
+											</select>
+											<span  class="sel_val"></span>
+											<script type="text/javascript">
+												valin('sam0');
+											</script>
+										</div>
+										<div class="txt_ty1">&nbsp;)</div>
+									</div>
+									<p class="btn_group virt_clr">
+										<a href="" class="btn_view">조회</a>
+									</p>
+								</div>
+							</div>
+							<div class="ctab_box">
+								<p class="ctabbox_wrap">
+									<a href="" class="f-l m_r1 active">주식거래</a>
+									<a href="" class="f-l m_r1">채권거래</a>
+									<a href="" class="f-l m_r1">현금성거래</a>
+									<a href="" class="f-l m_r1">파생상품거래</a>
+									<a href="" class="f-l">수익증권거래</a>
+								</p>
+							</div>
+							<table class="table_ty1 b1-9-2">
+								<caption class='hidden'>주식거래</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+									<col class="col5">
+									<col class="col6">
+									<col class="col7">
+									<col class="col8">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf"><a href="#aa" class="sorticon icon-chevron-de">시장구분</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">종목명</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래일</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래구분</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매주수</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매금액</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매수익률</a></th>
+										<th class="cle"><a href="#aa" class="sorticon icon-chevron-de">매매처</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf anc">유가증권</td>
+										<td class="anl" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 활성 행은 TR에 ac를 넣는다 -->
+									<tr class="ac">
+										<td class="clf anc">유가증권</td>
+										<td class="anl" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 마지막행 TR에 클래스 부여 -->
+									<tr class="rwe">
+										<td class="clf anc">유가증권</td>
+										<td class="anl" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+							<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+								<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+							<div class="ctab_box">
+								<p class="ctabbox_wrap">
+									<a href="" class="f-l m_r1">주식거래</a>
+									<a href="" class="f-l m_r1 active">채권거래</a>
+									<a href="" class="f-l m_r1">현금성거래</a>
+									<a href="" class="f-l m_r1">파생상품거래</a>
+									<a href="" class="f-l">수익증권거래</a>
+								</p>
+							</div>
+							<table class="table_ty1 b1-9-3">
+								<caption class='hidden'>채권거래</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+									<col class="col5">
+									<col class="col6">
+									<col class="col7">
+									<col class="col8">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf"><a href="#aa" class="sorticon icon-chevron-de">채권유형</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">종목명</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래일</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래구분</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래단가</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매금액</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매수익률</a></th>
+										<th class="cle"><a href="#aa" class="sorticon icon-chevron-de">매매처</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 활성 행은 TR에 ac를 넣는다 -->
+									<tr class="ac">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 마지막행 TR에 클래스 부여 -->
+									<tr class="rwe">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+							<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+								<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+							<div class="ctab_box">
+								<p class="ctabbox_wrap">
+									<a href="" class="f-l m_r1">주식거래</a>
+									<a href="" class="f-l m_r1">채권거래</a>
+									<a href="" class="f-l m_r1 active">현금성거래</a>
+									<a href="" class="f-l m_r1">파생상품거래</a>
+									<a href="" class="f-l">수익증권거래</a>
+								</p>
+							</div>
+							<table class="table_ty1 b1-9-4">
+								<caption class='hidden'>현금성거래</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+									<col class="col5">
+									<col class="col6">
+									<col class="col7">
+									<col class="col8">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf"><a href="#aa" class="sorticon icon-chevron-de">상품유형</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">종목명</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래일</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래구분</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래단가</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매금액</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매수익률</a></th>
+										<th class="cle"><a href="#aa" class="sorticon icon-chevron-de">매매처</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 활성 행은 TR에 ac를 넣는다 -->
+									<tr class="ac">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 마지막행 TR에 클래스 부여 -->
+									<tr class="rwe">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+							<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+								<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+							<div class="ctab_box">
+								<p class="ctabbox_wrap">
+									<a href="" class="f-l m_r1">주식거래</a>
+									<a href="" class="f-l m_r1">채권거래</a>
+									<a href="" class="f-l m_r1">현금성거래</a>
+									<a href="" class="f-l m_r1 active">파생상품거래</a>
+									<a href="" class="f-l">수익증권거래</a>
+								</p>
+							</div>
+							<table class="table_ty1 b1-9-5">
+								<caption class='hidden'>파생상품거래</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+									<col class="col5">
+									<col class="col6">
+									<col class="col7">
+									<col class="col8">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf"><a href="#aa" class="sorticon icon-chevron-de">상품유형</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">종목명</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래일</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래구분</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래단가</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매금액</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매수익률</a></th>
+										<th class="cle"><a href="#aa" class="sorticon icon-chevron-de">매매처</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 활성 행은 TR에 ac를 넣는다 -->
+									<tr class="ac">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 마지막행 TR에 클래스 부여 -->
+									<tr class="rwe">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+							<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+								<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+							<div class="ctab_box">
+								<p class="ctabbox_wrap">
+									<a href="" class="f-l m_r1">주식거래</a>
+									<a href="" class="f-l m_r1">채권거래</a>
+									<a href="" class="f-l m_r1">현금성거래</a>
+									<a href="" class="f-l m_r1">파생상품거래</a>
+									<a href="" class="f-l active">수익증권거래</a>
+								</p>
+							</div>
+							<table class="table_ty1 b1-9-6">
+								<caption class='hidden'>수익증권거래</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+									<col class="col5">
+									<col class="col6">
+									<col class="col7">
+									<col class="col8">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf"><a href="#aa" class="sorticon icon-chevron-de">상품유형</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">종목명</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래일</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래구분</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">거래단가</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매금액</a></th>
+										<th><a href="#aa" class="sorticon icon-chevron-de">매매수익률</a></th>
+										<th class="cle"><a href="#aa" class="sorticon icon-chevron-de">매매처</a></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 활성 행은 TR에 ac를 넣는다 -->
+									<tr class="ac">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+									<!-- 마지막행 TR에 클래스 부여 -->
+									<tr class="rwe">
+										<td class="clf anl">기타금융채</td>
+										<td class="anr" title="연기금통합사모증권투자신탁제156호[채권혼합-재간접형]">연기금통합사모증권투자신탁제156호[채권혼합-재간접형]</td>
+										<td class="anc">2013-06-24</td>
+										<td class="anc">매수</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">1,000,000,000</td>
+										<td class="anr">±99,999.99</td>
+										<td class="cle anl">이스트스프링</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+							<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+								<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</article>
+		</div>
+	</div>
+	<!-- 공통 하단 -->
+	<footer class="footer">
+		<div class="footer_wrap">
+			<a href="" class="btn_btlogo">에프앤가이드</a>
+			<p class="txt_box">
+				본사이트를 통해 제공되는 정보는 에프앤가이드와 제휴 계약을 맺은 신뢰할 만한 회사들로부터 제공된 정보를 기초로 해서 만들어진 것입니다. 그러나 당사 또는 당사에 정보를 제공한 회사가 정보의 정확성과 완전성을 보장하는 것은 아니며, 어떠한 경우에도 정보이용의 결과에 대해 책임을 지지 않습니다. 그리고 본 사이트를 통해 제공되는 자료는 지적재산권과 출판권의 보호를 받는 재산권으로서 당사의 동의 없이 어떠한 형태로든 복제, 변형, 배포, 전송, 대여할 수 없으며 만일 이를 위반할 경우 법적인 책임을 지게됩니다.
+			</p>
+			<p class="txt_box2">
+				<strong>(주)에프앤가이드</strong>
+				<span>|</span>
+				<span>Copyright (c) 2000 FnGuide Corporation. All rights reserved.</span>
+			</p>
+
+		</div>
+	</footer>
+</div>
+<!--script section-->
+<script>
+	<!--사용자 script 입력부분-->
+
+</script>
+<!--//script section-->
+</body>
+</html>

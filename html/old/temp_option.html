@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--//html5에서 bad value는 server root에서 .htaccess 파일에 "Header set X-UA-Compatible "IE=edge"" 이렇게 추가해주세요-->
+<title>FMS 템플릿</title>
+<script src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="../css/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="../css/fmscommon.css">
+<link rel="stylesheet" href="../css/tableset.css">
+<!--[if IE 6]><![endif]-->
+<!--[if IE 7]><![endif]-->
+<!--[if IE 8]><![endif]-->
+<!--[if IE 9]><![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+
+<![endif]-->
+<script>
+	// 웹폰트부분
+	google.load( "webfont", "1" );
+	google.setOnLoadCallback(function() {
+	WebFont.load({ custom: {
+	families: [ "NanumGothic" ],
+	urls: [ "http://fontface.kr/NanumGothic/css" ]}});});
+	// 웹폰트부분
+
+	function valin(this_id){// 콤보박스 값 넣어주는 샘플
+		$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		$('#'+this_id+' select').change(function(){
+			$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		});
+	}
+</script>
+</head>
+<body>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<dl>
+	<dt><strong class="hide">바로가기 메뉴</strong></dt>
+	<dd><a class="accessibility" href="#gnb">메인메뉴가기</a></dd>
+	<dd><a class="accessibility" href="#content">본문내용가기</a></dd>
+</dl>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<div class="body_wrap">
+	<div id="content" class="content">
+		<div class="content_wrap virt_clr">
+			<!-- 컨텐츠 -->
+			<article class="cont f-r">
+				<div class="wrap">
+					<div class="guide_area virt_clr">
+						<p class="gd f-r"><span>설정관리</span><span> > </span><span>설정정보관리</span><span> > </span><strong>현재 메뉴명</strong></p>
+						<a href="" class="btn_print">인쇄</a>
+					</div>
+					<section class="section_pg">
+						<h1 class="pg_title">조회 조건</h1>
+						<!-- 상단 -->
+						<section class="section_box">
+							<!-- 조회,삭제 그룹 옵션박스가 없을 때 사용 -->
+							<p class="btn_group btn_group_top virt_clr">
+								<a href="" class="btn_view">조회</a>
+								<a href="" class="btn_del">삭제</a>
+							</p>
+							<!-- 공용 옵션박스 -->
+							<div class="option_t_box virt_clr">
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="sel_ty1" id="sam0">
+										<select>
+											<option selected>가나다라</option>
+											<option style="font-size:15px;">마바사</option>
+										</select>
+										<span  class="sel_val"></span>
+										<script type="text/javascript">
+											valin('sam0');
+										</script>
+									</div>
+									<div class="ipt_ty2 ml_2">
+										<input name="" type="text" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" />
+									</div>
+								</div>
+								<p class="btn_group virt_clr">
+									<a href="" class="btn_view">조회</a>
+									<a href="" class="btn_del">삭제</a>
+								</p>
+							</div>
+							<!-- 공용 옵션박스 -->
+							<div class="option_b_box virt_clr">
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+									<div class="cad_ty1">
+										<input name="" type="text" maxlength="10" class="int_ty1" />
+										<a href="" class="btn_calopen">달력</a>
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty2">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="sel_ty1" id="sam1">
+										<select>
+											<option selected>가나다라</option>
+											<option style="font-size:15px;">마바사</option>
+										</select>
+										<span  class="sel_val"></span>
+										<script type="text/javascript">
+											valin('sam1');
+										</script>
+									</div>
+								</div>
+							</div>
+							<!-- 공용 옵션박스 -->
+							<div class="option_t_box option_t_box_b virt_clr">
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+									<div class="cad_ty1">
+										<input name="" type="text" maxlength="10" class="int_ty1" />
+										<a href="" class="btn_calopen">달력</a>
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty2">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="sel_ty1" id="sam1">
+										<select>
+											<option selected>가나다라</option>
+											<option style="font-size:15px;">마바사</option>
+										</select>
+										<span  class="sel_val"></span>
+										<script type="text/javascript">
+											valin('sam1');
+										</script>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</article>
+		</div>
+	</div>
+</div>
+<!--script section-->
+<script>
+	<!--사용자 script 입력부분-->
+
+</script>
+<!--//script section-->
+</body>
+</html>

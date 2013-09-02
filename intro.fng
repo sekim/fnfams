@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--//html5에서 bad value는 server root에서 .htaccess 파일에 "Header set X-UA-Compatible "IE=edge"" 이렇게 추가해주세요-->
+<title>fams</title>
+<link rel="stylesheet" href="../css/fmscommon.css">
+<link rel="stylesheet" href="../css/tableset.css">
+<!--[if IE 6]><![endif]-->
+<!--[if IE 7]><![endif]-->
+<!--[if IE 8]><![endif]-->
+<!--[if IE 9]><![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+<![endif]-->
+</head>
+<body>
+<div class="body_wrap">
+	<!-- 공통 상단 -->
+	<header class="header2">
+		<div class="header_wrap">
+			<h1><a href="intro.fng">FMS로고 링크</a></h1>
+		</div>
+	</header>
+	<!-- 메인컨튼츠 영역 -->
+	<div class="introcont">
+		<div class="introcont_box">
+			<div class="logbbs_area">
+				<div class="intlft">
+					<div class="intlft_wrap">
+						<h1>Login to your account</h1>
+						<ul>
+							<li class="inptbox">
+								<div class="inp_wrap">
+									<label for="" class="id">
+									</label>
+									<input id="user_id" type="text">
+								</div>
+							</li>
+							<li class="inptbox">
+								<div class="inp_wrap">
+									<label for="" class="pw">
+									</label>
+									<input id="user_pw" type="password">
+								</div>
+							</li>
+							<li class="btnbox">
+								<label for=""><input id="saveId" name="" type="checkbox" value="" />아이디 저장</label>
+								<a href="javascript:;" id="btnLogin" class="btn_famslogin"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="intrgt">
+					<h1>FAMS Notice</h1>
+					<div class="table_wrap">
+						<a href="" class="btn_txtmore">+ more</a>
+						<div id="gridgroup5" class="scwrap h_ty2">
+		          <div id="noticeGrid"></div>
+			      </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 공통 하단 -->
+	<footer class="footer">
+		<div class="footer_wrap">
+			<a href="" class="btn_btlogo">에프앤가이드</a>
+			<p class="txt_box">
+				본사이트를 통해 제공되는 정보는 에프앤가이드와 제휴 계약을 맺은 신뢰할 만한 회사들로부터 제공된 정보를 기초로 해서 만들어진 것입니다. 그러나 당사 또는 당사에 정보를 제공한 회사가 정보의 정확성과 완전성을 보장하는 것은 아니며, 어떠한 경우에도 정보이용의 결과에 대해 책임을 지지 않습니다. 그리고 본 사이트를 통해 제공되는 자료는 지적재산권과 출판권의 보호를 받는 재산권으로서 당사의 동의 없이 어떠한 형태로든 복제, 변형, 배포, 전송, 대여할 수 없으며 만일 이를 위반할 경우 법적인 책임을 지게됩니다.
+			</p>
+			<p class="txt_box2">
+				<strong>(주)에프앤가이드</strong>
+				<span>|</span>
+				<span>Copyright (c) 2000 FnGuide Corporation. All rights reserved.</span>
+			</p>
+		</div>
+	</footer>
+</div>
+<input id="returnUrl" type="text" value='<%=request.querystring("rtnUrl")%>'/>
+<!--script section-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="../scripts/lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../scripts/fng.js"></script>
+<script type="text/javascript" src="../scripts/intro.js"></script>
+<!--//script section-->
+</body>
+</html>

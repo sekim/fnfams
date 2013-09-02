@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="scripts/lib/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+	test
+	<input id='btnGo' type="button" value="button">
+</body>
+<script>
+	$(function($) {
+	  $("#btnGo").click(function() {
+	    display("Loading...");
+
+	    addDivs(0, 500, function() {
+	      display("Done loading");
+	    });
+
+	    function addDivs(current, max, callback) {
+	      if (current < max) {
+	        $("<div/>").html("Div #" + current).appendTo(document.body);
+	        setTimeout(function() {
+	          addDivs(current + 1, max, callback);
+	        }, 0);
+	      }
+	      else {
+	        callback();
+	      }
+	    }
+
+	    function display(msg) {
+	      $("<p/>").html(msg).appendTo(document.body);
+	    }
+	  });
+	});
+</script>
+</html>

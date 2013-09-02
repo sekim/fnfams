@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<!--//html5에서 bad value는 server root에서 .htaccess 파일에 "Header set X-UA-Compatible "IE=edge"" 이렇게 추가해주세요-->
+<title>FMS 템플릿</title>
+<script src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="../css/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="../css/fmscommon.css">
+<link rel="stylesheet" href="../css/tableset.css">
+<!--[if IE 6]><![endif]-->
+<!--[if IE 7]><![endif]-->
+<!--[if IE 8]><![endif]-->
+<!--[if IE 9]><![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+<![endif]-->
+<script>
+	// 웹폰트부분
+	google.load( "webfont", "1" );
+	google.setOnLoadCallback(function() {
+	WebFont.load({ custom: {
+	families: [ "NanumGothic" ],
+	urls: [ "http://fontface.kr/NanumGothic/css" ]}});});
+	// 웹폰트부분
+
+	function valin(this_id){// 콤보박스 값 넣어주는 샘플
+		$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		$('#'+this_id+' select').change(function(){
+			$('#'+this_id+' .sel_val').text($('#'+this_id+' select').val());
+		});
+	}
+</script>
+</head>
+<body>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<dl>
+	<dt><strong class="hide">바로가기 메뉴</strong></dt>
+	<dd><a class="accessibility" href="#gnb">메인메뉴가기</a></dd>
+	<dd><a class="accessibility" href="#content">본문내용가기</a></dd>
+</dl>
+<!--//본문바로가기&#8211;tab키로 이동 가능-->
+<div class="body_wrap">
+	<!-- 공통 상단 -->
+	<header class="header">
+		<div class="header_wrap">
+			<h1><a href="#">FMS로고 링크</a></h1>
+			<nav id="gnb" class="gnb main_w">
+				<ul class="virt_clr">
+					<li><a href="a1-1.html">시장정보</a></li>
+					<li><a href="b1-1.html">포트폴리오분석</a></li>
+					<li><a href="c1-1.html">성과분석</a></li>
+					<li><a href="d1-1.html">위험분석</a></li>
+					<li><a href="e1-1.html">성과요인분석</a></li>
+					<li><a href="f1-1.html">My Menu</a></li>
+					<li><a href="s1-1.html" class="ac">설정관리</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- 메인컨튼츠 영역 -->
+	<div id="content" class="content">
+		<div class="content_wrap virt_clr">
+			<!-- LNB *활성화 클래스 ac -->
+			<div class="left-area f-l">
+				<div class="wrap">
+					<h1>설정관리</h1>
+					<!-- 좌측메뉴 -->
+					<nav class="lnb">
+						<div class="lnb_wrap">
+							<div class="menubox">
+								<h2>등록관리</h2>
+								<ul>
+									<li><a href="s1-1.html"><span>기금 등록</span></a></li>
+									<li><a href="s1-2.html" class="ac"><span>펀드 등록</span></a></li>
+									<li><a href="s1-3.html"><span>자펀드 등록</span></a></li>
+									<li><a href="s1-4.html"><span>펀드 비중관리</span></a></li>
+									<li><a href="s1-5.html"><span>잔산배분 비중관리</span></a></li>
+								</ul>
+							</div>
+							<div class="menubox">
+								<h2>설정정보관리</h2>
+								<ul>
+									<li><a href="s2-1.html"><span>성과단위 등록</span></a></li>
+									<li><a href="s2-2.html"><span>성과단위 코드</span></a></li>
+									<li><a href="s2-3.html"><span>성과단위 상품</span></a></li>
+									<li><a href="s2-4.html"><span>성과단위 BM</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<!-- 개인정보 -->
+					<dl class="la_info">
+						<dt>홍길동 <a href="#">logout</a></dt>
+						<dd>담당자 : 양치기</dd>
+						<dd>연락처 : 02-769-7777</dd>
+					</dl>
+					<!-- 공지사항 -->
+					<dl class="la_bbs" >
+						<dt>공지사항 <a href="">more</a></dt>
+						<dd><a href="">제목제목제목</a></dd>
+						<dd><a href="">제목제목제목</a></dd>
+						<dd><a href="">제목제목제목</a></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- 컨텐츠 -->
+			<article class="cont f-r">
+				<div class="wrap">
+					<div class="guide_area virt_clr">
+						<p class="gd f-r"><span>설정관리</span><span> > </span><span>설정정보관리</span><span> > </span><strong>현재 메뉴명</strong></p>
+						<a href="" class="btn_print">인쇄</a>
+					</div>
+					<section class="section_pg">
+						<h1 class="pg_title">조회 조건</h1>
+						<!-- 상단 -->
+						<section class="section_box">
+							<!-- 조회,삭제 그룹 옵션박스가 없을 때 사용 -->
+							<p class="btn_group btn_group_top virt_clr">
+								<a href="" class="btn_view">조회</a>
+								<a href="" class="btn_del">삭제</a>
+							</p>
+							<!-- 공용 옵션박스 -->
+							<div class="option_t_box virt_clr">
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="sel_ty1" id="sam0">
+										<select>
+											<option selected>가나다라</option>
+											<option style="font-size:15px;">마바사</option>
+										</select>
+										<span  class="sel_val"></span>
+										<script type="text/javascript">
+											valin('sam0');
+										</script>
+									</div>
+									<div class="ipt_ty2 ml_2">
+										<input name="" type="text" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" />
+									</div>
+								</div>
+								<p class="btn_group virt_clr">
+									<a href="" class="btn_view">조회</a>
+									<a href="" class="btn_del">삭제</a>
+								</p>
+							</div>
+							<!-- 테이블 규정 -->
+							<!-- 첫번째 td에는 clf, 마지막 td에는 cle 클래스가 꼭 있어야 함 -->
+							<!-- 마지막 행 tr에는 rwe 클래스가 꼭 있어야 함 -->
+							<!-- td 정렬 anl, anr, anc -->
+							<!-- th 기본은 센터 anc는 안줘도 됨 -->
+							<table class="table_ty1">
+								<caption>템플릿</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf anc">xx</th>
+										<th class="anr">xx</th>
+										<th class="anc">xx</th>
+										<th class="cle">xx</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+									<tr class="ac">
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+									<tr class="rwe">
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+								</tbody>
+							</table>
+<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+							<table class="table_ty1">
+								<caption>템플릿</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf anc">xx</th>
+										<th class="anr">xx</th>
+										<th class="anc">xx</th>
+										<th class="cle">xx</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+									<tr class="ac">
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+									<tr class="rwe">
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+								</tbody>
+							</table>
+<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+							<ul class="tip_box">
+								<li>해당 서비스에 대한 각주를 제공합니다. 옵션 항목에 있는 입력필드에 대하여 인풋(입력), 셀렉트(선택) 등 기본 값에 대하여 사전에 확인을 거쳐야 합니다.<br/>각주에 사용되는 폰트는 돋움 11px - #888 - LineHeight 16px</li>
+								<li>해당 서비스에 대한 각주를 제공합니다. 옵션 항목에 있는 입력필드에 대하여 인풋(입력), 셀렉트(선택) 등 기본 값에 대하여 사전에 확인을 거쳐야 합니다.<br/>각주에 사용되는 폰트는 돋움 11px - #888 - LineHeight 16px</li>
+							</ul>
+						</section>
+						<section class="section_box">
+							<div class="head_box virt_clr">
+								<h2>조회 조건</h2>
+							</div>
+							<!-- 좌 anl 우anr 가운데anc -->
+							<table class="table_ty1">
+								<caption>템플릿</caption>
+								<colgroup>
+									<col class="col1">
+									<col class="col2">
+									<col class="col3">
+									<col class="col4">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="clf anc">xx</th>
+										<th class="anr">xx</th>
+										<th class="anc">xx</th>
+										<th class="cle">xx</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+									<tr class="rwe">
+										<td class="clf">xx</td>
+										<td class="anr">x</td>
+										<td class="anc">xx</td>
+										<td class="cle">x</td>
+									</tr>
+								</tbody>
+							</table>
+<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+						</section>
+						<section class="section_box">
+							<div class="head_box virt_clr">
+								<h2>조회 조건</h2>
+								<p class="btn_group virt_clr"><a href="##" class="btn_new">신규</a><a href="##" class="btn_save">저장</a></p>
+							</div>
+							<!-- 공용 옵션박스 -->
+							<div class="option_b_box virt_clr">
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+									<div class="cad_ty1">
+										<input name="" type="text" maxlength="10" class="int_ty1" />
+										<a href="" class="btn_calopen">달력</a>
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty2">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+									<span class="f-l">@</span>
+									<div class="sel_ty1" id="sam1">
+										<select>
+											<option selected>가나다라</option>
+											<option style="font-size:15px;">마바사</option>
+										</select>
+										<span  class="sel_val"></span>
+										<script type="text/javascript">
+											valin('sam1');
+										</script>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- 왼쪽 선택박스가 있는 형태 :::::::::::::::::::::::::::::::::::::::::::  -->
+						<section class="section_box col2type">
+							<div class="head_box virt_clr">
+								<h2>조회 조건</h2>
+								<p class="btn_group virt_clr"><a href="##" class="btn_new">신규</a><a href="##" class="btn_save">저장</a></p>
+							</div>
+							<!-- 공용 옵션박스 -->
+							<div class="option_t_box option_t_box_b virt_clr">
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+									<div class="cad_ty1">
+										<input name="" type="text" maxlength="10" class="int_ty1" />
+										<a href="" class="btn_calopen">달력</a>
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty2">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="ipt_ty1">
+										<input name="" type="text" class="int_ty1" />
+									</div>
+								</div>
+								<div class="fbox fbox_ty1">
+									<label for="">고객번호</label>
+									<div class="sel_ty1" id="sam1">
+										<select>
+											<option selected>가나다라</option>
+											<option style="font-size:15px;">마바사</option>
+										</select>
+										<span  class="sel_val"></span>
+										<script type="text/javascript">
+											valin('sam1');
+										</script>
+									</div>
+								</div>
+							</div>
+							<div class="layout_c2 virt_clr">
+								<!-- 외쪽 체크 박스 -->
+								<div class="menuchk_box">
+									<span class="menutotal_ck"><input type="checkbox"><span class="menu_txt"><strong>성과단위</strong></span></span>
+									<ul class="menu_dep1">
+										<li class="dep_li">
+											<a href="#fms" class="menu menu_hidden"><input type="checkbox"><span class="menu_txt">단기</span></a>
+											<ul class="menu_dep2">
+												<li class="dep_li">
+													<a href="#fms" class="menu menu_hidden"><input type="checkbox"><span class="menu_txt">현금성</span></a>
+													<ul class="menu_dep3">
+														<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">정기예금</span></span></li>
+														<li class="dep_li menuend"><span class="menu_none"><input type="checkbox"><span class="menu_txt">MMDA</span></span></li>
+													</ul>
+												</li>
+												<li class="dep_li menuend">
+													<a href="#fms" class="menu menu_hidden"><input type="checkbox"><span class="menu_txt">유동성</span></a>
+													<ul class="menu_dep3">
+														<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">1-3개월</span></span></li>
+														<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">1-6개월</span></span></li>
+														<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">3-6개월</span></span></li>
+														<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">3-9개월</span></span></li>
+														<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">1-9개월</span></span></li>
+														<li class="dep_li menuend"><span class="menu_none"><input type="checkbox"><span class="menu_txt">1-12개월</span></span></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="dep_li menuend">
+											<a href="#fms" class="menu menu_hidden"><input type="checkbox"><span class="menu_txt">중장기</span></a>
+											<ul class="menu_dep2">
+												<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">확장금리상품</span></span></li>
+												<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">주식형</span></span></li>
+												<li class="dep_li"><span class="menu_none"><input type="checkbox"><span class="menu_txt">채권형</span></span></li>
+												<li class="dep_li menuend"><span class="menu_none"><input type="checkbox"><span class="menu_txt">대체투자형</span></span></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="f-r w_666">
+									<!-- 좌 anl 우anr 가운데anc -->
+									<div class="table_wrap pd_23">
+										<table class="table_ty1">
+											<caption>템플릿</caption>
+											<colgroup>
+												<col class="col1">
+												<col class="col2">
+												<col class="col3">
+												<col class="col4">
+											</colgroup>
+											<thead>
+												<tr>
+													<th class="clf anc">xx</th>
+													<th class="anr">xx</th>
+													<th class="anc">xx</th>
+													<th class="cle">xx</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="clf">xx</td>
+													<td class="anr">x</td>
+													<td class="anc">xx</td>
+													<td class="cle">x</td>
+												</tr>
+												<tr class="rwe">
+													<td class="clf">xx</td>
+													<td class="anr">x</td>
+													<td class="anc">xx</td>
+													<td class="cle">x</td>
+												</tr>
+											</tbody>
+										</table>
+<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+									</div>
+									<div class="head_box virt_clr">
+										<h2>조회 조건</h2>
+										<p class="btn_group virt_clr"><a href="##" class="btn_reg">등록</a></p>
+									</div>
+									<table class="table_ty1">
+										<caption>템플릿</caption>
+										<colgroup>
+											<col class="col1">
+											<col class="col2">
+											<col class="col3">
+											<col class="col4">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="clf anc">xx</th>
+												<th class="anr">xx</th>
+												<th class="anc">xx</th>
+												<th class="cle">xx</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="clf">xx</td>
+												<td class="anr">x</td>
+												<td class="anc">xx</td>
+												<td class="cle">x</td>
+											</tr>
+											<tr class="rwe">
+												<td class="clf">xx</td>
+												<td class="anr">x</td>
+												<td class="anc">xx</td>
+												<td class="cle">x</td>
+											</tr>
+										</tbody>
+									</table>
+<!-- 페이징 테이플 마크업 바로 밑에 위치 -->
+<div class="fmspage">
+								<a href="" class="btn_exdown2">엑셀다운로드</a>
+<div class="fmspage_wrap">
+									<a href="" class="btn_pgprev2">처음페이지</a>
+									<a href="" class="btn_pgprev">이전페이지</a>
+									<a href="" class="btn_pgtxt txt_active">1</a>
+									<a href="" class="btn_pgtxt">2</a>
+									<a href="" class="btn_pgtxt">3</a>
+									<a href="" class="btn_pgtxt">4</a>
+									<a href="" class="btn_pgtxt">5</a>
+									<a href="" class="btn_pgtxt">6</a>
+									<a href="" class="btn_pgtxt">7</a>
+									<a href="" class="btn_pgtxt">8</a>
+									<a href="" class="btn_pgtxt">9</a>
+									<a href="" class="btn_pgtxt">10</a>
+									<a href="" class="btn_pgnext">다음페이지</a>
+									<a href="" class="btn_pgnext2">마지막페이지</a>
+								</div>
+								<div class="pggd">
+									<strong>1</strong>/<span>10</span>
+								</div>
+							</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</article>
+		</div>
+	</div>
+	<!-- 공통 하단 -->
+	<footer class="footer">
+		<div class="footer_wrap">
+			<a href="" class="btn_btlogo">에프앤가이드</a>
+			<p class="txt_box">
+				본사이트를 통해 제공되는 정보는 에프앤가이드와 제휴 계약을 맺은 신뢰할 만한 회사들로부터 제공된 정보를 기초로 해서 만들어진 것입니다. 그러나 당사 또는 당사에 정보를 제공한 회사가 정보의 정확성과 완전성을 보장하는 것은 아니며, 어떠한 경우에도 정보이용의 결과에 대해 책임을 지지 않습니다. 그리고 본 사이트를 통해 제공되는 자료는 지적재산권과 출판권의 보호를 받는 재산권으로서 당사의 동의 없이 어떠한 형태로든 복제, 변형, 배포, 전송, 대여할 수 없으며 만일 이를 위반할 경우 법적인 책임을 지게됩니다.
+			</p>
+			<p class="txt_box2">
+				<strong>(주)에프앤가이드</strong>
+				<span>|</span>
+				<span>Copyright (c) 2000 FnGuide Corporation. All rights reserved.</span>
+			</p>
+
+		</div>
+	</footer>
+</div>
+<!--script section-->
+<script>
+	<!--사용자 script 입력부분-->
+
+</script>
+<!--//script section-->
+</body>
+</html>
